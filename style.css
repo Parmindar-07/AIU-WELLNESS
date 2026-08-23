@@ -1,0 +1,2955 @@
+/* =========================================================
+   AIU WELLNESS
+   MAIN WEBSITE CSS
+
+   Is file mein website ka complete visual design
+   control kiya jayega.
+   ========================================================= */
+
+
+/* =========================================================
+   1. COLOR VARIABLES
+   Yahan hum website ke main colors define kar rahe hain.
+
+   Baad mein poori website ka color change karna ho
+   to mainly yahin changes karne padenge.
+   ========================================================= */
+
+:root {
+
+    /* Warm cream background */
+    --cream: #f7f3ea;
+
+    /* Slightly darker cream */
+    --cream-dark: #eee8dc;
+
+    /* Main dark green */
+    --forest: #31483a;
+
+    /* Light sage green */
+    --sage: #a8b5a0;
+
+    /* Golden accent */
+    --gold: #c7a76a;
+
+    /* Main text color */
+    --text-dark: #292923;
+
+    /* White */
+    --white: #ffffff;
+}
+
+
+
+/* =========================================================
+   2. BASIC RESET
+
+   Browser ke default margin aur padding ko remove karta hai.
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   3. HTML
+
+   Smooth scrolling enable karta hai.
+
+   Jab user navbar ke kisi section par click karega,
+   page smoothly scroll karega.
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* =========================================================
+   4. BODY
+   ========================================================= */
+
+body {
+
+    /* Simple clean font */
+    font-family: Arial, sans-serif;
+
+    /* Main website background */
+    background-color: var(--cream);
+
+    /* Main text color */
+    color: var(--text-dark);
+
+    /* Line spacing */
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   5. LINKS
+   ========================================================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* =========================================================
+   6. NAVBAR
+   ========================================================= */
+
+.navbar {
+
+    /* Navbar ko horizontal banata hai */
+    display: flex;
+
+    /* Logo left aur menu right */
+    justify-content: space-between;
+
+    /* Vertically center */
+    align-items: center;
+
+    /* Navbar ki height */
+    min-height: 82px;
+
+    /* Left-right spacing */
+    padding: 0 6%;
+
+    /* Navbar background */
+    background-color: rgba(247, 243, 234, 0.92);
+
+    /* Navbar ko top par visible rakhta hai */
+    position: sticky;
+
+    top: 0;
+
+    /* Dusre elements ke upar */
+    z-index: 1000;
+
+    /* Soft bottom line */
+    border-bottom: 1px solid rgba(49, 72, 58, 0.08);
+
+    /* Background ko thoda transparent/glass effect */
+    backdrop-filter: blur(10px);
+}
+
+
+
+/* =========================================================
+   7. LOGO
+   ========================================================= */
+
+.logo {
+
+    /* Logo ke andar elements vertically */
+    display: flex;
+
+    flex-direction: column;
+
+    /* Logo ke letters ke beech distance */
+    line-height: 1;
+}
+
+
+
+/* Main AIU text */
+.logo-main {
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: var(--forest);
+}
+
+
+
+/* WELLNESS text */
+.logo-sub {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    margin-top: 5px;
+
+    color: var(--gold);
+}
+
+
+
+/* =========================================================
+   8. DESKTOP NAVIGATION
+   ========================================================= */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+
+/* Normal navigation links */
+
+.nav-menu a {
+
+    font-size: 14px;
+
+    color: var(--forest);
+
+    transition: 0.3s ease;
+}
+
+
+
+/* Mouse hover */
+
+.nav-menu a:hover {
+
+    color: var(--gold);
+}
+
+
+
+/* =========================================================
+   9. BOOK BUTTON IN NAVBAR
+   ========================================================= */
+
+.nav-book-button {
+
+    background-color: var(--forest);
+
+    color: var(--white) !important;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+}
+
+
+
+/* Hover effect */
+
+.nav-book-button:hover {
+
+    background-color: var(--gold);
+
+}
+
+
+
+/* =========================================================
+   10. MOBILE MENU BUTTON
+
+   Desktop par hidden rahega.
+   ========================================================= */
+
+.mobile-menu-button {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    font-size: 28px;
+
+    color: var(--forest);
+}
+
+
+
+/* =========================================================
+   11. HERO SECTION
+   ========================================================= */
+
+.hero {
+
+    /* Minimum screen height */
+    min-height: calc(100vh - 82px);
+
+    /* Two-column layout */
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    /* Vertical center */
+    align-items: center;
+
+    /* Space around content */
+    gap: 50px;
+
+    /* Left-right padding */
+    padding: 70px 8%;
+
+    /* Prevent content from going outside */
+    overflow: hidden;
+
+    /* Soft background */
+    background:
+
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(168, 181, 160, 0.35),
+            transparent 35%
+        ),
+
+        var(--cream);
+}
+
+
+
+/* =========================================================
+   12. HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+
+    max-width: 650px;
+
+    animation: heroFadeIn 1s ease forwards;
+}
+
+
+
+/* =========================================================
+   13. HERO LABEL
+   ========================================================= */
+
+.hero-label {
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================================
+   14. MAIN HERO HEADING
+   ========================================================= */
+
+.hero h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: var(--forest);
+
+    margin-bottom: 28px;
+}
+
+
+
+/* Second line of heading */
+
+.hero h1 span {
+
+    display: block;
+
+    font-style: italic;
+
+    color: var(--gold);
+}
+
+
+
+/* =========================================================
+   15. HERO SUBHEADING
+   ========================================================= */
+
+.hero h2 {
+
+    max-width: 600px;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    color: var(--forest);
+
+    margin-bottom: 22px;
+}
+
+
+
+/* =========================================================
+   16. HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+
+    max-width: 560px;
+
+    font-size: 17px;
+
+    color: #5f625b;
+
+    margin-bottom: 35px;
+}
+
+
+
+/* =========================================================
+   17. HERO BUTTON CONTAINER
+   ========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================================
+   18. PRIMARY BUTTON
+   ========================================================= */
+
+.primary-button {
+
+    display: inline-block;
+
+    background-color: var(--forest);
+
+    color: var(--white);
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+
+/* Primary button hover */
+
+.primary-button:hover {
+
+    background-color: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   19. SECONDARY BUTTON
+   ========================================================= */
+
+.secondary-button {
+
+    display: inline-block;
+
+    border: 1px solid var(--forest);
+
+    color: var(--forest);
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+
+/* Secondary hover */
+
+.secondary-button:hover {
+
+    background-color: var(--forest);
+
+    color: var(--white);
+}
+
+
+
+/* =========================================================
+   20. HERO VISUAL
+   ========================================================= */
+
+.hero-visual {
+
+    /* Visual ko square rakhne ki koshish */
+    aspect-ratio: 1 / 1;
+
+    max-width: 500px;
+
+    width: 100%;
+
+    margin: auto;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+
+/* =========================================================
+   21. LARGE DECORATIVE CIRCLE
+   ========================================================= */
+
+.hero-circle {
+
+    position: absolute;
+
+    width: 75%;
+
+    height: 75%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(199, 167, 106, 0.30),
+            rgba(168, 181, 160, 0.45)
+        );
+
+    border: 1px solid rgba(49, 72, 58, 0.12);
+}
+
+
+
+/* =========================================================
+   22. SMALL DECORATIVE CIRCLE
+   ========================================================= */
+
+.hero-small-circle {
+
+    position: absolute;
+
+    width: 45%;
+
+    height: 45%;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(199, 167, 106, 0.7);
+
+    animation: slowRotate 15s linear infinite;
+}
+
+
+
+/* =========================================================
+   23. CENTER TEXT
+   ========================================================= */
+
+.hero-visual-text {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: var(--forest);
+}
+
+
+
+.hero-visual-text span {
+
+    font-size: 18px;
+
+    font-style: italic;
+}
+
+
+
+.hero-visual-text strong {
+
+    font-size: 45px;
+
+    font-weight: 400;
+
+    color: var(--gold);
+}
+
+
+
+/* =========================================================
+   24. TEMPORARY SECTIONS
+   Abhi ke liye placeholder sections.
+   Baad mein inko proper design milega.
+   ========================================================= */
+
+.temporary-section {
+
+    min-height: 50vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: var(--forest);
+}
+
+
+
+/* =========================================================
+   25. HERO FADE-IN ANIMATION
+   ========================================================= */
+
+@keyframes heroFadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+
+/* =========================================================
+   26. CIRCLE ROTATION ANIMATION
+   ========================================================= */
+
+@keyframes slowRotate {
+
+    from {
+
+        transform: rotate(0deg);
+    }
+
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* =========================================================
+   27. TABLET / SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-menu {
+
+        gap: 15px;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+
+    .hero-content {
+
+        margin: auto;
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-visual {
+
+        max-width: 400px;
+    }
+
+}
+
+
+
+/* =========================================================
+   28. MOBILE SCREEN
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    /* Navbar padding reduce */
+    .navbar {
+
+        min-height: 70px;
+
+        padding: 0 5%;
+    }
+
+
+    /* Desktop menu hide */
+    .nav-menu {
+
+        display: none;
+    }
+
+
+    /* Mobile button show */
+    .mobile-menu-button {
+
+        display: block;
+    }
+
+
+    /* Hero height */
+    .hero {
+
+        min-height: auto;
+
+        padding: 70px 6% 60px;
+
+        gap: 30px;
+    }
+
+
+    /* Hero heading smaller */
+    .hero h1 {
+
+        font-size: clamp(48px, 15vw, 70px);
+    }
+
+
+    /* Hero subtitle */
+    .hero h2 {
+
+        font-size: 20px;
+    }
+
+
+    /* Description */
+    .hero-description {
+
+        font-size: 16px;
+    }
+
+
+    /* Visual smaller */
+    .hero-visual {
+
+        max-width: 320px;
+    }
+
+
+    /* Temporary section */
+    .temporary-section {
+
+        min-height: 40vh;
+
+        font-size: 24px;
+
+        text-align: center;
+    }
+
+}
+/* =========================================================
+   OFFERINGS SECTION
+   ========================================================= */
+
+.offerings-section {
+
+    /* Section ki vertical spacing */
+    padding: 120px 8%;
+
+    /* Background */
+    background-color: var(--cream-dark);
+
+}
+
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+
+    /* Text ko center mein rakhta hai */
+    text-align: center;
+
+    /* Maximum width */
+    max-width: 750px;
+
+    /* Center horizontally */
+    margin: 0 auto 65px;
+
+}
+
+
+
+/* Small golden label */
+
+.section-label {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* Main heading */
+
+.section-heading h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: var(--forest);
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* Heading ka second part */
+
+.section-heading h2 span {
+
+    display: block;
+
+    font-style: italic;
+
+    color: var(--gold);
+
+}
+
+
+
+/* Section description */
+
+.section-description {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    font-size: 16px;
+
+    color: #66685f;
+
+}
+
+
+
+/* =========================================================
+   OFFERING GRID
+
+   Desktop par 4 cards ek row mein.
+   ========================================================= */
+
+.offerings-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+
+
+/* =========================================================
+   OFFERING CARD
+   ========================================================= */
+
+.offering-card {
+
+    position: relative;
+
+    background-color: var(--cream);
+
+    padding: 38px 28px;
+
+    min-height: 420px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid rgba(49, 72, 58, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+}
+
+
+
+/* Card hover */
+
+.offering-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(49, 72, 58, 0.10);
+
+}
+
+
+
+/* =========================================================
+   OFFERING ICON
+   ========================================================= */
+
+.offering-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: rgba(168, 181, 160, 0.25);
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* =========================================================
+   OFFERING NUMBER
+   ========================================================= */
+
+.offering-number {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold);
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* =========================================================
+   OFFERING TITLE
+   ========================================================= */
+
+.offering-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    line-height: 1.15;
+
+    font-weight: 400;
+
+    color: var(--forest);
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* Second line in title */
+
+.offering-card h3 small {
+
+    display: block;
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    color: var(--gold);
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =========================================================
+   OFFERING DESCRIPTION
+   ========================================================= */
+
+.offering-card > p {
+
+    font-size: 14px;
+
+    color: #66685f;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================================================
+   OFFERING PRICE
+   ========================================================= */
+
+.offering-price {
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: var(--forest);
+
+    margin-top: auto;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* Pending price */
+
+.pending-price {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    color: #888;
+
+}
+
+
+
+/* =========================================================
+   LEARN MORE BUTTON
+   ========================================================= */
+
+.learn-more-button {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    background: transparent;
+
+    border: none;
+
+    border-top: 1px solid rgba(49, 72, 58, 0.15);
+
+    padding-top: 18px;
+
+    color: var(--forest);
+
+    font-size: 13px;
+
+    text-align: left;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* Button arrow */
+
+.learn-more-button span {
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+
+/* Hover */
+
+.learn-more-button:hover {
+
+    color: var(--gold);
+
+}
+
+
+
+/* Arrow movement */
+
+.learn-more-button:hover span {
+
+    transform: translateX(6px);
+
+}
+
+
+
+/* =========================================================
+   OFFERING MODAL
+
+   Initially invisible.
+   JavaScript "active" class add karega.
+   ========================================================= */
+
+.offering-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* Modal active */
+
+.offering-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-color: rgba(29, 39, 32, 0.65);
+
+    backdrop-filter: blur(6px);
+
+}
+
+
+
+/* =========================================================
+   MODAL BOX
+   ========================================================= */
+
+.modal-box {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 550px;
+
+    background-color: var(--cream);
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    transform: translateY(20px);
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* Modal active animation */
+
+.offering-modal.active .modal-box {
+
+    transform: translateY(0);
+
+}
+
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+   ========================================================= */
+
+.modal-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    font-weight: 300;
+
+    color: var(--forest);
+
+    cursor: pointer;
+
+}
+
+
+
+/* =========================================================
+   MODAL ICON
+   ========================================================= */
+
+.modal-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    background-color: rgba(168, 181, 160, 0.3);
+
+    font-size: 30px;
+
+}
+
+
+
+/* =========================================================
+   MODAL NUMBER
+   ========================================================= */
+
+.modal-number {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+/* =========================================================
+   MODAL TITLE
+   ========================================================= */
+
+.modal-box h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    color: var(--forest);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =========================================================
+   MODAL DESCRIPTION
+   ========================================================= */
+
+.modal-box > p {
+
+    color: #66685f;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================================================
+   MODAL PRICE
+   ========================================================= */
+
+.modal-price {
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: var(--gold);
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================================================
+   MODAL BOOK BUTTON
+   ========================================================= */
+
+.modal-book-button {
+
+    display: inline-block;
+
+    background-color: var(--forest);
+
+    color: var(--white);
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* Hover */
+
+.modal-book-button:hover {
+
+    background-color: var(--gold);
+
+}
+
+
+
+/* =========================================================
+   OFFERINGS RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .offerings-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .offerings-section {
+
+        padding: 85px 6%;
+
+    }
+
+
+    .offerings-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .offering-card {
+
+        min-height: 390px;
+
+    }
+
+
+    .modal-box {
+
+        padding: 45px 25px;
+
+    }
+
+
+    .modal-box h3 {
+
+        font-size: 30px;
+
+    }
+
+}
+/* =========================================================
+   RETURN TO SELF — PREMIUM PROGRAM
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN SECTION
+   ========================================================= */
+
+.return-section {
+
+    /* Section ki position */
+    position: relative;
+
+    /* Section ke bahar decorative elements hide */
+    overflow: hidden;
+
+    /* Dark premium background */
+    background-color: var(--forest);
+
+    /* Large vertical spacing */
+    padding: 120px 8%;
+
+    /* Text color */
+    color: var(--white);
+
+}
+
+
+
+/* =========================================================
+   DECORATIVE GLOW
+   ========================================================= */
+
+.return-glow {
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(199, 167, 106, 0.18),
+            transparent 65%
+        );
+
+    top: -250px;
+
+    right: -150px;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.return-container {
+
+    /* Two columns */
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.85fr;
+
+    gap: 80px;
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.return-content {
+
+    padding-top: 20px;
+
+}
+
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.return-label {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.return-content h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(65px, 8vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.85;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* Second line */
+
+.return-content h2 span {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.return-subtitle {
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    color: #e7dfd1;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.return-description {
+
+    max-width: 600px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #c9cec7;
+
+    margin-bottom: 45px;
+
+}
+
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.return-highlights {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+/* =========================================================
+   SINGLE HIGHLIGHT
+   ========================================================= */
+
+.return-highlight {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+
+/* =========================================================
+   HIGHLIGHT ICON
+   ========================================================= */
+
+.highlight-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(199, 167, 106, 0.35);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+}
+
+
+
+/* Highlight heading */
+
+.return-highlight strong {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #eee8dc;
+
+    margin-bottom: 2px;
+
+}
+
+
+
+/* Highlight description */
+
+.return-highlight p {
+
+    font-size: 13px;
+
+    color: #aeb7ae;
+
+}
+
+
+
+/* =========================================================
+   PRICE + BUTTON
+   ========================================================= */
+
+.return-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.return-price {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+/* "3 Sessions" */
+
+.return-price span {
+
+    font-size: 12px;
+
+    color: #aeb7ae;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 3px;
+
+}
+
+
+
+/* ₹4999 */
+
+.return-price strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 35px;
+
+    font-weight: 400;
+
+    color: var(--gold);
+
+}
+
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.return-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: var(--gold);
+
+    color: var(--forest);
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+
+
+/* Button arrow */
+
+.return-button span {
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+
+/* Hover */
+
+.return-button:hover {
+
+    background-color: var(--cream);
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* Arrow movement */
+
+.return-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+
+/* =========================================================
+   JOURNEY CARD
+   ========================================================= */
+
+.journey-card {
+
+    position: relative;
+
+    padding: 45px 40px;
+
+    background-color: rgba(247, 243, 234, 0.06);
+
+    border: 1px solid rgba(247, 243, 234, 0.13);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+/* =========================================================
+   JOURNEY HEADING
+   ========================================================= */
+
+.journey-heading {
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(247, 243, 234, 0.12);
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* Small label */
+
+.journey-heading span {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+/* Main heading */
+
+.journey-heading h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 34px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #f2ede4;
+
+    margin-top: 10px;
+
+}
+
+
+
+/* =========================================================
+   JOURNEY STEP
+   ========================================================= */
+
+.journey-step {
+
+    display: grid;
+
+    grid-template-columns: 45px 1px 1fr;
+
+    gap: 20px;
+
+    position: relative;
+
+    padding-bottom: 35px;
+
+}
+
+
+
+/* Last step */
+
+.journey-step:last-child {
+
+    padding-bottom: 0;
+
+}
+
+
+
+/* =========================================================
+   JOURNEY NUMBER
+   ========================================================= */
+
+.journey-number {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(199, 167, 106, 0.5);
+
+    border-radius: 50%;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+/* =========================================================
+   JOURNEY LINE
+   ========================================================= */
+
+.journey-line {
+
+    width: 1px;
+
+    height: calc(100% - 42px);
+
+    background-color: rgba(199, 167, 106, 0.3);
+
+    position: absolute;
+
+    left: 21px;
+
+    top: 42px;
+
+}
+
+
+
+/* Last step mein line hide */
+
+.journey-step:last-child .journey-line {
+
+    display: none;
+
+}
+
+
+
+/* =========================================================
+   JOURNEY INFORMATION
+   ========================================================= */
+
+.journey-info {
+
+    padding-top: 2px;
+
+}
+
+
+
+/* Session label */
+
+.journey-info > span {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #9fa99f;
+
+}
+
+
+
+/* Session heading */
+
+.journey-info h4 {
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    color: #f2ede4;
+
+    margin: 6px 0 8px;
+
+}
+
+
+
+/* Session description */
+
+.journey-info p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #aeb7ae;
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .return-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .return-content {
+
+        text-align: center;
+
+    }
+
+
+    .return-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .return-highlights {
+
+        max-width: 500px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        text-align: left;
+
+    }
+
+
+    .return-bottom {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .return-section {
+
+        padding: 85px 6%;
+
+    }
+
+
+    .return-content h2 {
+
+        font-size: 70px;
+
+    }
+
+
+    .return-subtitle {
+
+        font-size: 19px;
+
+    }
+
+
+    .return-description {
+
+        font-size: 15px;
+
+    }
+
+
+    .return-bottom {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .journey-card {
+
+        padding: 35px 22px;
+
+    }
+
+
+    .journey-heading h3 {
+
+        font-size: 29px;
+
+    }
+
+
+    .journey-step {
+
+        grid-template-columns: 42px 1px 1fr;
+
+        gap: 15px;
+
+    }
+
+}
+
+/* =========================================================
+   RETURN TO SELF - JOURNEY ALIGNMENT FIX
+
+   Problem:
+   Journey description ko bahut chhoti width mil rahi thi,
+   jiski wajah se har word alag line mein aa raha tha.
+
+   Fix:
+   Journey step ko 2-column layout diya gaya hai:
+   1. Number
+   2. Content
+
+   Vertical line ko separately absolute position kiya gaya hai.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   JOURNEY STEP
+   Number + Content ko proper width deta hai.
+   --------------------------------------------------------- */
+
+.journey-step {
+
+    /* Sirf 2 actual columns */
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    /* Number aur content ke beech spacing */
+    column-gap: 20px;
+
+    /* Puri available width use kare */
+    width: 100%;
+
+}
+
+
+/* ---------------------------------------------------------
+   JOURNEY INFO
+   Content ko available space lene deta hai.
+   --------------------------------------------------------- */
+
+.journey-info {
+
+    /* Grid ke andar content ko shrink hone se rokta hai */
+    min-width: 0;
+
+    /* Available width ka pura use */
+    width: 100%;
+
+}
+
+
+/* ---------------------------------------------------------
+   JOURNEY DESCRIPTION
+   Text normal wrapping ke saath chalega.
+   --------------------------------------------------------- */
+
+.journey-info p {
+
+    /* Normal word wrapping */
+    white-space: normal;
+
+    /* Words ko unnecessarily todne se rokta hai */
+    word-break: normal;
+
+    /* Long text ko zarurat par wrap karega */
+    overflow-wrap: break-word;
+
+    /* Full available width */
+    width: 100%;
+
+}
+
+
+/* ---------------------------------------------------------
+   VERTICAL LINE
+   Number ke center se neeche jayegi.
+   --------------------------------------------------------- */
+
+.journey-line {
+
+    /* Number ke center ke according position */
+    left: 21px;
+
+    /* Number ke neeche se start */
+    top: 42px;
+
+    /* Line ki width */
+    width: 1px;
+
+}
+/* =========================================================
+   ABOUT / GUIDE SECTION
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   MAIN SECTION
+   --------------------------------------------------------- */
+
+.about-section {
+
+    /* Section spacing */
+    padding: 120px 8%;
+
+    /* Main background */
+    background-color: var(--cream);
+
+    /* Hidden decorative elements */
+    overflow: hidden;
+
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT CONTAINER
+   --------------------------------------------------------- */
+
+.about-container {
+
+    /* Two-column layout */
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    /* Space between image and text */
+    gap: 100px;
+
+    /* Maximum width */
+    max-width: 1200px;
+
+    /* Center */
+    margin: auto;
+
+    /* Vertically align */
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   IMAGE SIDE
+   ========================================================= */
+
+.about-image-wrapper {
+
+    /* Required for decorative elements */
+    position: relative;
+
+    /* Square area */
+    aspect-ratio: 0.85 / 1;
+
+    /* Maximum size */
+    max-width: 450px;
+
+    width: 100%;
+
+    /* Center */
+    margin: auto;
+
+}
+
+
+/* ---------------------------------------------------------
+   Decorative circle
+   --------------------------------------------------------- */
+
+.about-image-circle {
+
+    position: absolute;
+
+    width: 90%;
+
+    height: 90%;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(199, 167, 106, 0.5);
+
+    top: 5%;
+
+    left: 5%;
+
+}
+
+
+/* ---------------------------------------------------------
+   Image placeholder
+   --------------------------------------------------------- */
+
+.about-image-placeholder {
+
+    /* Position */
+    position: absolute;
+
+    inset: 8%;
+
+    /* Background */
+    background:
+
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(199, 167, 106, 0.35),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #d7ddd1,
+            #a8b5a0
+        );
+
+    /* Rounded shape */
+    border-radius: 50%;
+
+    /* Center content */
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    /* Shadow */
+    box-shadow:
+        0 25px 60px rgba(49, 72, 58, 0.12);
+
+}
+
+
+/* Placeholder icon */
+
+.about-image-placeholder span {
+
+    font-size: 38px;
+
+    color: var(--gold);
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Placeholder name */
+
+.about-image-placeholder p {
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    color: var(--forest);
+
+}
+
+
+/* Placeholder small text */
+
+.about-image-placeholder small {
+
+    margin-top: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--forest);
+
+    opacity: 0.7;
+
+}
+
+
+/* ---------------------------------------------------------
+   Image caption
+   --------------------------------------------------------- */
+
+.about-image-caption {
+
+    position: absolute;
+
+    bottom: 7%;
+
+    right: -10px;
+
+    background-color: var(--forest);
+
+    color: var(--gold);
+
+    padding: 12px 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+   ========================================================= */
+
+.about-content {
+
+    max-width: 620px;
+
+}
+
+
+/* Label */
+
+.about-label {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Heading
+   --------------------------------------------------------- */
+
+.about-content h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 6vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: var(--forest);
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Second line */
+
+.about-content h2 span {
+
+    display: block;
+
+    color: var(--gold);
+
+    font-style: italic;
+
+}
+
+
+/* ---------------------------------------------------------
+   Role
+   --------------------------------------------------------- */
+
+.about-role {
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    color: var(--forest);
+
+    margin-bottom: 28px;
+
+}
+
+
+/* ---------------------------------------------------------
+   Description
+   --------------------------------------------------------- */
+
+.about-description {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #66685f;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================================
+   BIO PLACEHOLDER
+   ========================================================= */
+
+.bio-placeholder {
+
+    border-left: 2px solid var(--gold);
+
+    padding: 5px 0 5px 20px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* Small heading */
+
+.bio-placeholder span {
+
+    display: block;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold);
+
+    margin-bottom: 7px;
+
+}
+
+
+/* Placeholder text */
+
+.bio-placeholder p {
+
+    font-size: 14px;
+
+    color: #777970;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================================
+   SESSION INFORMATION
+   ========================================================= */
+
+.session-info {
+
+    display: flex;
+
+    gap: 45px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(49, 72, 58, 0.12);
+
+    border-bottom: 1px solid rgba(49, 72, 58, 0.12);
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Single info item */
+
+.session-info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+/* Info icon */
+
+.session-info-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 50%;
+
+    background-color: rgba(168, 181, 160, 0.25);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold);
+
+    font-size: 20px;
+
+}
+
+
+/* Info label */
+
+.session-info-item span {
+
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #888b83;
+
+    margin-bottom: 3px;
+
+}
+
+
+/* Info value */
+
+.session-info-item strong {
+
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    color: var(--forest);
+
+}
+
+
+/* =========================================================
+   ABOUT BUTTON
+   ========================================================= */
+
+.about-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px 24px;
+
+    background-color: var(--forest);
+
+    color: var(--white);
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* Button arrow */
+
+.about-button span {
+
+    font-size: 19px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+/* Hover */
+
+.about-button:hover {
+
+    background-color: var(--gold);
+
+}
+
+
+/* Arrow */
+
+.about-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .about-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+
+    }
+
+
+    .about-content {
+
+        max-width: 700px;
+
+        margin: auto;
+
+        text-align: center;
+
+    }
+
+
+    .about-description {
+
+        max-width: 600px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .bio-placeholder {
+
+        text-align: left;
+
+    }
+
+
+    .session-info {
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .about-section {
+
+        padding: 85px 6%;
+
+    }
+
+
+    .about-image-wrapper {
+
+        max-width: 330px;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 58px;
+
+    }
+
+
+    .session-info {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .about-content {
+
+        text-align: left;
+
+    }
+
+
+    .about-description {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+    }
+
+}
