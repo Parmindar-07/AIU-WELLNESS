@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    AIU WELLNESS
    MAIN WEBSITE CSS
 
@@ -1508,7 +1508,7 @@ a {
 
 }
 /* =========================================================
-   RETURN TO SELF — PREMIUM PROGRAM
+   RETURN TO SELF â€” PREMIUM PROGRAM
    ========================================================= */
 
 
@@ -1843,7 +1843,7 @@ a {
 
 
 
-/* ₹4999 */
+/* â‚¹4999 */
 
 .return-price strong {
 
@@ -2144,7 +2144,7 @@ a {
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   RESPONSIVE â€” TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -2198,7 +2198,7 @@ a {
 
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE â€” MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
@@ -2952,4 +2952,264 @@ a {
 
     }
 
+}.modal-intro {
+    color: #66685f;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
 }
+
+.modal-details {
+    display: grid;
+    gap: 18px;
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.modal-details-block {
+    background-color: rgba(255, 255, 255, 0.42);
+    border: 1px solid rgba(49, 72, 58, 0.08);
+    padding: 18px 18px 16px;
+}
+
+.modal-details-block span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.modal-details-block ul {
+    padding-left: 18px;
+    color: #4c514a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.modal-details-block li + li {
+    margin-top: 6px;
+}
+
+.modal-details-block p {
+    color: #4c514a;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .modal-box {
+        padding: 40px 24px;
+    }
+
+    .modal-box h3 {
+        font-size: 28px;
+    }
+
+    .modal-details {
+        gap: 14px;
+    }
+}
+.feedback-section {
+    padding: 120px 8%;
+    background-color: var(--cream);
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feedback-card {`r`n    position: relative;`r`n    margin: 0;`r`n    overflow: hidden;`r`n    border: 1px solid rgba(49, 72, 58, 0.08);`r`n    background: var(--white);`r`n    box-shadow: 0 16px 40px rgba(49, 72, 58, 0.08);`r`n}`r`n`r`n.feedback-card img {`r`n    display: block;`r`n    width: 100%;`r`n    height: auto;`r`n    max-width: 100%;`r`n}`r`n`r`n.feedback-card figcaption {`r`n    position: absolute;`r`n    left: 12px;`r`n    bottom: 12px;`r`n    z-index: 1;`r`n    padding: 6px 10px;`r`n    background: rgba(247, 243, 234, 0.88);`r`n    color: var(--forest);`r`n    font-size: 11px;`r`n    letter-spacing: 1px;`r`n    text-transform: uppercase;`r`n    border: 1px solid rgba(49, 72, 58, 0.08);`r`n}
+
+.certificate-section {
+    padding: 0 8% 120px;
+    background-color: var(--cream);
+}
+
+.certificate-wrap {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificate-copy h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 5vw, 66px);
+    font-weight: 400;
+    line-height: 1.05;
+    color: var(--forest);
+    margin-bottom: 18px;
+}
+
+.certificate-copy h2 span {
+    display: block;
+    color: var(--gold);
+    font-style: italic;
+}
+
+.certificate-frame {
+    border: 1px solid rgba(49, 72, 58, 0.08);
+    background: var(--white);
+    padding: 14px;
+    box-shadow: 0 18px 45px rgba(49, 72, 58, 0.08);
+}
+
+.certificate-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 900px) {`r`n    .feedback-grid,`r`n    .certificate-wrap {`r`n        grid-template-columns: 1fr;`r`n    }`r`n}`r`n
+
+@media (max-width: 600px) {`r`n    .feedback-section,`r`n    .certificate-section {`r`n        padding-left: 6%;`r`n        padding-right: 6%;`r`n    }`r`n}`r`n
+
+
+
+
+
+
+.feedback-section .feedback-grid {
+    gap: 18px;
+    max-width: 920px;
+}
+
+.feedback-card {
+    height: 140px !important;
+    border-radius: 12px;
+}
+
+.feedback-card img {
+    object-fit: contain !important;
+}
+
+.feedback-section .section-heading {
+    margin-bottom: 35px;
+}
+
+@media (max-width: 900px) {
+    .feedback-section .feedback-grid {
+        max-width: 680px;
+    }
+
+    .feedback-card {
+        height: 220px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .feedback-card {
+        height: 180px !important;
+    }
+}
+/* Feedback + Certificate cleanup override */
+.feedback-section {
+    padding: 90px 8% 70px;
+    background-color: var(--cream);
+}
+
+.feedback-section .section-heading {
+    margin-bottom: 28px;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 980px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.feedback-card {
+    margin: 0;
+    height: 140px !important;
+    overflow: hidden;
+    border: 1px solid rgba(49, 72, 58, 0.08);
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(49, 72, 58, 0.08);
+    border-radius: 10px;
+}
+
+.feedback-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center center;
+}
+
+.feedback-card figcaption {
+    display: none !important;
+}
+
+.certificate-section {
+    padding: 40px 8% 90px;
+    background-color: var(--cream);
+}
+
+.certificate-wrap {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.certificate-copy h2 {
+    font-size: clamp(34px, 4vw, 56px);
+    margin-bottom: 12px;
+}
+
+.certificate-frame {
+    max-width: 560px;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.certificate-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .feedback-grid,
+    .certificate-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-card {
+        height: 140px !important;
+    }
+
+    .certificate-copy {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .feedback-section,
+    .certificate-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .feedback-grid {
+        gap: 14px;
+    }
+
+    .feedback-card {
+        height: 120px !important;
+    }
+}
+
