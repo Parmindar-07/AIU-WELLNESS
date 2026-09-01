@@ -2,9 +2,14 @@
     console.log("AIU Wellness JavaScript loaded successfully.");
 
     const mobileMenuButton = document.getElementById("mobileMenuButton");
-    if (mobileMenuButton) {
+    const navMenu = document.querySelector(".nav-menu");
+    if (mobileMenuButton && navMenu) {
         mobileMenuButton.addEventListener("click", function () {
-            console.log("Mobile menu button clicked.");
+            const isOpen = navMenu.classList.toggle("active");
+            mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        });
+        navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () { navMenu.classList.remove("active"); });
         });
     }
 
@@ -147,4 +152,7 @@
         }).join("");
     }
 });
+
+
+
 

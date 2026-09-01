@@ -3213,3 +3213,19 @@ a {
     }
 }
 
+
+@media (max-width: 900px) { .nav-menu.active { display:flex; position:absolute; top:100%; right:5%; flex-direction:column; align-items:stretch; gap:12px; padding:16px; background:var(--cream); border:1px solid rgba(49,72,58,.15); border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.12); z-index:1000; } }
+
+.about-profile-image { display:block; width:100%; height:100%; object-fit:cover; object-position:center top; border-radius:50%; image-rendering:auto; }
+.about-image-placeholder { overflow:hidden; }
+
+
+/* Offerings sorted by price: 999, 1111, 1499, 2999, 4999 */
+.offerings-grid .offering-card:nth-child(1) { order: 1; }
+.offerings-grid .offering-card:nth-child(2) { order: 2; }
+.offerings-grid .offering-card:nth-child(7) { order: 3; }
+.offerings-grid .offering-card:nth-child(3) { order: 4; }
+.offerings-grid .offering-card:nth-child(6) { order: 5; }
+.offerings-grid .offering-card:nth-child(4) { order: 6; }
+.offerings-grid .offering-card:nth-child(5) { order: 7; }
+.offerings-grid .offering-card:nth-child(8) { order: 8; }
